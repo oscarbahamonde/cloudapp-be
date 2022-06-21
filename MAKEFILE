@@ -1,0 +1,108 @@
+#!src env/bin/sh
+
+# Setup of NodeJS and Python development environment
+
+sudo apt update -y
+sudo apt upgrade -y
+
+# Curl
+
+sudo apt install curl -y
+
+# Wget
+
+sudo apt install wget -y
+
+# Net-tools
+
+sudo apt install net-tools -y
+
+# Unzip
+
+sudo apt install unzip -y
+
+# Nmap
+
+sudo apt install nmap -y
+
+# Nmon
+
+sudo apt install nmon -y
+
+# Git
+
+sudo apt install git -y
+
+# NodeJS
+
+sudo apt install nodejs -y
+
+# NVM
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+# Docker
+
+curl -fsSL https://get.docker.com | sh
+
+# Docker Compose
+
+sudo apt install -y docker-compose
+
+# NVM 16
+
+nvm install 16
+nvm use 16
+
+# NPM
+
+npm install -g npm
+
+# Yarn
+
+npm install -g yarn
+
+# Python3
+
+sudo apt install python3-pip -y
+sudo apt install python3-venv -y
+
+# Pipenv
+
+pip3 install pipenv
+python3 -m pipenv shell
+
+# Vue, TailwindCSS, Vitesse, Vite
+
+npm i -g @vitejs/vite vite-cli tailwindcss vitesse-cli vue-cli
+
+# FastAPI
+
+python3 -m pip install fastapi[all] sqlmodel boto3 faunadb geocoder pytube instabot qrcode psycopg2-binary
+
+# AWS CLI
+
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+# Pulumi CLI
+
+curl -sSL "https://get.pulumi.com" | bash
+
+# Netlify CLI
+
+npm install -g netlify-cli
+
+# Adding everything to PATH
+
+echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
+source ~/.bashrc
+
+# Adding everything to PATH for Python3
+
+echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
+
+# Adding everything to PATH for NodeJS
+
+# now everything is available in PATH
